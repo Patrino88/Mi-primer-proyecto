@@ -1,0 +1,31 @@
+# Datos privados y exportaciones
+private/
+exports/
+backups/
+*.xlsx
+*.xls
+*.csv
+*.pdf
+*.docx
+
+# Archivos locales y temporales
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
+*.bak
+__pycache__/
+.pytest_cache/
+.venv/
+node_modules/
+dist/
+build/
+coverage/
+
+# IDE y sistema operativo
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
