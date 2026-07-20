@@ -1,18 +1,18 @@
-# Código fuente
+# Código fuente Flutter
 
-Esta carpeta recibirá el código al abrir F3 y aprobar el framework.
+El framework quedó aprobado: Flutter + Dart. Al inicializar F3, el código ejecutable seguirá la convención de Flutter dentro de `lib/`; esta carpeta descriptiva no debe convertirse en una segunda raíz de código.
 
 Organización prevista:
 
 ```text
-src/
-  presentation/
-  application/
+lib/
+  app/
+  core/
   domain/
   data/
+  features/
   platform/
-  shared/
+test/
 ```
 
-No se añade una implementación ficticia antes de cerrar las decisiones de arquitectura.
-
+El dominio permanece en Dart puro y no depende de widgets. Flutter compone la presentación; Riverpod coordina estado y dependencias; Drift administra SQLite y sus migraciones.
