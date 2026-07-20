@@ -1,6 +1,17 @@
-# Arquitectura conceptual
+# Arquitectura Flutter aprobada
 
-La arquitectura definitiva y el framework móvil se aprobarán al abrir F3. Esta estructura evita acoplar reglas financieras a una interfaz específica.
+F3 utiliza Flutter y Dart. Android es el primer destino verificable, pero la interfaz y el dominio se preparan para móvil, tableta y escritorio sin duplicar reglas financieras.
+
+## Tecnología base
+
+| Componente | Elección |
+|---|---|
+| Interfaz multiplataforma | Flutter + Dart |
+| Estado y dependencias | Riverpod |
+| Navegación | go_router |
+| Persistencia | Drift sobre SQLite |
+| Dominio | Dart puro, independiente de Flutter |
+| Estrategia | Local primero, migraciones versionadas y módulos bajo demanda |
 
 ## Capas previstas
 
@@ -11,6 +22,20 @@ La arquitectura definitiva y el framework móvil se aprobarán al abrir F3. Esta
 | Dominio | Movimientos, cuentas, compromisos, periodos y reglas financieras |
 | Datos | Persistencia local, migraciones, importación y exportación |
 | Plataforma | Calendario, conectividad, archivos, reloj y capacidades del dispositivo |
+
+## Estructura prevista
+
+```text
+lib/
+  app/
+  core/
+  domain/
+  data/
+  features/
+  platform/
+test/
+docs/
+```
 
 ## Módulos personales
 
@@ -32,4 +57,4 @@ La arquitectura definitiva y el framework móvil se aprobarán al abrir F3. Esta
 - Los saldos pueden ser positivos, cero o negativos.
 - Los datos personales y empresariales permanecen separados.
 - Las integraciones externas se encapsulan y pueden desactivarse.
-
+- Los módulos opcionales existen en el registro de código, pero sus rutas y pantallas sólo aparecen cuando se activan.
