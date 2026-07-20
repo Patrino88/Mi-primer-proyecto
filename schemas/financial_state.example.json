@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "0.1.0",
+  "generatedAt": "2000-01-01T00:00:00.000Z",
+  "currency": "XXX",
+  "summary": {
+    "availableFunds": 0,
+    "committedFunds": 0,
+    "freeFunds": 0
+  },
+  "accounts": [],
+  "commitments": [],
+  "movements": [],
+  "investments": [],
+  "upcomingEvents": [],
+  "rules": [],
+  "metadata": {
+    "containsRealData": false,
+    "generatedForDocumentation": true
+  }
+}
+
